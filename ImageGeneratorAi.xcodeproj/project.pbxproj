@@ -8,18 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		2D4842CC299583ED0034F97E /* ImageGeneratorAiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4842CB299583ED0034F97E /* ImageGeneratorAiApp.swift */; };
-		2D4842CE299583ED0034F97E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4842CD299583ED0034F97E /* ContentView.swift */; };
 		2D4842D0299583F10034F97E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D4842CF299583F10034F97E /* Assets.xcassets */; };
 		2D4842D4299583F10034F97E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D4842D3299583F10034F97E /* Preview Assets.xcassets */; };
+		2D4842DC2995846C0034F97E /* OpenAIKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2D4842DB2995846C0034F97E /* OpenAIKit */; };
+		2D4842DE299584870034F97E /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4842DD299584870034F97E /* ViewModel.swift */; };
+		2D4842E0299584A40034F97E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4842DF299584A40034F97E /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2D4842C8299583ED0034F97E /* ImageGeneratorAi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageGeneratorAi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D4842CB299583ED0034F97E /* ImageGeneratorAiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGeneratorAiApp.swift; sourceTree = "<group>"; };
-		2D4842CD299583ED0034F97E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2D4842CF299583F10034F97E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2D4842D1299583F10034F97E /* ImageGeneratorAi.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ImageGeneratorAi.entitlements; sourceTree = "<group>"; };
 		2D4842D3299583F10034F97E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2D4842DD299584870034F97E /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewModel.swift; path = "../../ai-image-generator/OpenAI Image Generator/ViewModel.swift"; sourceTree = "<group>"; };
+		2D4842DF299584A40034F97E /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = "../../ai-image-generator/OpenAI Image Generator/ContentView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +30,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D4842DC2995846C0034F97E /* OpenAIKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,7 +57,8 @@
 			isa = PBXGroup;
 			children = (
 				2D4842CB299583ED0034F97E /* ImageGeneratorAiApp.swift */,
-				2D4842CD299583ED0034F97E /* ContentView.swift */,
+				2D4842DF299584A40034F97E /* ContentView.swift */,
+				2D4842DD299584870034F97E /* ViewModel.swift */,
 				2D4842CF299583F10034F97E /* Assets.xcassets */,
 				2D4842D1299583F10034F97E /* ImageGeneratorAi.entitlements */,
 				2D4842D2299583F10034F97E /* Preview Content */,
@@ -85,6 +90,9 @@
 			dependencies = (
 			);
 			name = ImageGeneratorAi;
+			packageProductDependencies = (
+				2D4842DB2995846C0034F97E /* OpenAIKit */,
+			);
 			productName = ImageGeneratorAi;
 			productReference = 2D4842C8299583ED0034F97E /* ImageGeneratorAi.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +121,9 @@
 				Base,
 			);
 			mainGroup = 2D4842BF299583EC0034F97E;
+			packageReferences = (
+				2D4842DA2995846C0034F97E /* XCRemoteSwiftPackageReference "OpenAIKit" */,
+			);
 			productRefGroup = 2D4842C9299583ED0034F97E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -139,8 +150,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D4842CE299583ED0034F97E /* ContentView.swift in Sources */,
+				2D4842DE299584870034F97E /* ViewModel.swift in Sources */,
 				2D4842CC299583ED0034F97E /* ImageGeneratorAiApp.swift in Sources */,
+				2D4842E0299584A40034F97E /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,6 +362,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2D4842DA2995846C0034F97E /* XCRemoteSwiftPackageReference "OpenAIKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MarcoDotIO/OpenAIKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2D4842DB2995846C0034F97E /* OpenAIKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2D4842DA2995846C0034F97E /* XCRemoteSwiftPackageReference "OpenAIKit" */;
+			productName = OpenAIKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2D4842C0299583EC0034F97E /* Project object */;
 }
